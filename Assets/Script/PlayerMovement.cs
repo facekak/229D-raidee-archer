@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +10,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 move;
     public float moveSpeed = 10f;
     public float jumpPower = 100f;
+
+    public float health = 100f;
+    public float maxHealth = 100f;
+
+    public float arrowDamage = 10f;
+
+    public TextMeshProUGUI playerHealth;
 
     void Start()
     {
@@ -26,8 +35,15 @@ public class PlayerMovement : MonoBehaviour
     {
         rd2D.AddForce( move * moveSpeed );
         
+        playerHealth.text = $"<color=black>Player Health</color> <color=#E41B17>{health}</color>";
         //rd2D.MovePosition( rd2D.position + (move * moveSpeed) );
- 
+
     }//FixedUpdate
-    
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Arrow"))
+            health -= arrowDamage;
+        
+    }
 }
