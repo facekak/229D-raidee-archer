@@ -89,8 +89,6 @@ public class Projectile : MonoBehaviour
                 reloadingArrow = 0f; 
                 reloadBar.value = reloadingArrow;
             }
-
-        
             
         }
     }

@@ -14,13 +14,16 @@ public class PlayerMovement : MonoBehaviour
     public float health = 100f;
     public float maxHealth = 100f;
 
-    public float arrowDamage = 10f;
+    
 
     public TextMeshProUGUI playerHealth;
+    
 
     void Start()
     {
         rd2D = GetComponent<Rigidbody2D>();
+        
+        
     }// Start
     void Update()
     {
@@ -40,10 +43,5 @@ public class PlayerMovement : MonoBehaviour
 
     }//FixedUpdate
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Arrow"))
-            health -= arrowDamage;
-        
-    }
+    
 }
