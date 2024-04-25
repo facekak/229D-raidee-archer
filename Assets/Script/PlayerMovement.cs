@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -39,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
         rd2D.AddForce( move * moveSpeed );
         
         playerHealth.text = $"<color=black>Player Health</color> <color=#E41B17>{health}</color>";
+        if (health <= 0)
+        {
+            SceneManager.LoadScene (sceneName:"EndCredit");
+        }
         //rd2D.MovePosition( rd2D.position + (move * moveSpeed) );
 
     }//FixedUpdate

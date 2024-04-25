@@ -158,7 +158,7 @@ public class Enemy : MonoBehaviour
             counterTxt.gameObject.SetActive(true);
             counterSkillTime += Time.deltaTime;
             Debug.Log("countering" + counterSkillTime);
-            if (counterSkillTime >= 2)
+            if (counterSkillTime >= 3)
             {
                 Debug.Log("Over Countering");
                 counterTxt.gameObject.SetActive(false);
@@ -178,7 +178,6 @@ public class Enemy : MonoBehaviour
             enemyHp += 20f;
             target.gameObject.GetComponent<PlayerMovement>().health -= 10;
             counterTxt.gameObject.SetActive(false);
-            isLastStage = false;
             counterSkill = 0f;
             isCounter = false;
             counterSkillTime = 0;
