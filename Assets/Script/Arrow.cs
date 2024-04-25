@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowDespawn : MonoBehaviour
+public class Arrow : MonoBehaviour
 {
     public float despawnCountdonw;
 
@@ -31,12 +31,13 @@ public class ArrowDespawn : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            gameObject.GetComponent<PlayerMovement>().health -= arrowDamage;
+            col.gameObject.GetComponent<PlayerMovement>().health -= arrowDamage;
+            Destroy(gameObject);
         }
         else if (col.gameObject.CompareTag("Enemy"))
         {
-            gameObject.GetComponent<Enemy>().enemyHp -= arrowDamage;
-            
+            col.gameObject.GetComponent<Enemy>().enemyHp -= arrowDamage;
+            Destroy(gameObject);
         }
 
     }
