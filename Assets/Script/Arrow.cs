@@ -29,14 +29,20 @@ public class Arrow : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") && gameObject.CompareTag("EnemyArrow"))
         {
             col.gameObject.GetComponent<PlayerMovement>().health -= arrowDamage;
             Destroy(gameObject);
         }
-        else if (col.gameObject.CompareTag("Enemy"))
+        else if (col.gameObject.CompareTag("Enemy") && gameObject.CompareTag("Arrow"))
         {
-            col.gameObject.GetComponent<Enemy>().enemyHp -= arrowDamage;
+            Enemy enemy = col.gameObject.GetComponent<Enemy>();
+
+            if (!enemy.isLastStage == true)
+            {
+                enemy.enemyHp -= arrowDamage;
+            }
+                
             Destroy(gameObject);
         }
 

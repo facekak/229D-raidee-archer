@@ -8,7 +8,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Script/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -69,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713967313330</updated>
       <workItem from="1713967334939" duration="9069000" />
-      <workItem from="1714021300054" duration="1502000" />
+      <workItem from="1714021300054" duration="9436000" />
     </task>
     <servers />
   </component>
