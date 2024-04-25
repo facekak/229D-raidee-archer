@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         playerHealth.text = $"<color=black>Player Health</color> <color=#E41B17>{health}</color>";
         if (health <= 0)
         {
-            SceneManager.LoadScene (sceneName:"EndCredit");
+            SceneManager.LoadSceneAsync(2);
         }
         //rd2D.MovePosition( rd2D.position + (move * moveSpeed) );
 
