@@ -1078,7 +1078,7 @@ MonoBehaviour:
   reloadingArrow: 0
   reloadArrowTime: 2.1
   isLastStage: 0
-  enemyHp: 20
+  enemyHp: 100
   enemyHealth: {fileID: 858666578}
   immortalTxt: {fileID: 577130939}
   counterTxt: {fileID: 50448736}
