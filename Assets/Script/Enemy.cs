@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -136,6 +137,7 @@ public class Enemy : MonoBehaviour
         else if (enemyHp <= 0 )
         {
             gameObject.SetActive(false);
+            SceneManager.LoadSceneAsync(4);
         }
 
     }
